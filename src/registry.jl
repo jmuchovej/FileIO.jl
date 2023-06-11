@@ -13,10 +13,9 @@ const idStatFiles = :StatFiles => UUID("1463e38c-9381-5320-bcd4-4134955f093a")
 const idSixel = :Sixel => UUID("45858cf5-a6b0-47a3-bbea-62219f50df47")
 const idVegaLite = :VegaLite => UUID("112f6efa-9a02-5b7d-90c0-432ed331239a")
 const idVideoIO = :VideoIO => UUID("d6d074c3-1acf-5d4c-9a43-ef38773959a2")
-const idLibSndFile = :LibSndFile => UUID("b13ce0c6-77b0-50c6-a2db-140568b8d1a5") 
+const idLibSndFile = :LibSndFile => UUID("b13ce0c6-77b0-50c6-a2db-140568b8d1a5")
 const idJpegTurbo = :JpegTurbo => UUID("b835a17e-a41a-41e7-81f0-2f016b05efe0")
 const idNPZ = :NPZ => UUID("15e1cf62-19b3-5cfa-8e77-841668bca605")
-
 ### Simple cases
 
 # data formats
@@ -531,3 +530,8 @@ add_format(format"QOI", "qoif", ".qoi", [:QOI => UUID("4b34888f-f399-49d4-9bb3-4
 
 # Bibliography files.
 add_format(format"BIB", (), [".bib"], [:Bibliography => UUID("f1be7e48-bf82-45af-a471-ae754a193061")])
+
+# POMDP files
+const idPOMDPFiles = :POMDPFiles => UUID("9cf5b727-2e06-5671-8c87-8c6b0f729d5d")
+add_format(format"ALPHA", (), [".alpha"], [idPOMDPFiles])
+add_format(format"POMDP", (), [".pomdp"], [idPOMDPFiles])
